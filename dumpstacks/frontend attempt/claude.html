@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake News Checker</title>
+  
+  <!-- Add some CSS styling -->
+  <style>
+    /* Chat bubble styling */
+    .chat-bubble {
+      background: #eee; 
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 80%;
+      margin-bottom: 10px; 
+    }
+    
+    .chat-bubble.user {
+      margin-left: auto;
+    }
+    
+    .chat-bubble.bot {
+      margin-right: auto; 
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Chat interface -->
+  <div class="chat-window">
+  
+    <!-- Bot response bubble -->
+    <div class="chat-bubble bot">
+      Hi there! I can help check if news is real or fake.
+    </div>
+
+    <!-- Input form -->
+    <form id="check-form">
+      <input type="text" name="title" placeholder="Enter title">
+      <textarea name="text" placeholder="Enter text"></textarea>
+      <input type="text" name="subject" placeholder="Enter subject">
+      <input type="date" name="date">
+
+      <button type="submit">Check</button>
+    </form>
+  
+    <!-- User request bubble -->
+    <div class="chat-bubble user">
+      Fetching results...
+    </div>
+  
+    <!-- Bot response bubble -->
+    <div id="bot-response" class="chat-bubble bot">
+      <!-- Result text populated here --> 
+    </div>
+
+  </div>
+
+  <!-- JavaScript code to handle form submit -->
+  <script>
+    const form = document.getElementById('check-form');
+    const botResponse = document.getElementById('bot-response');
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      // Build request data
+      const data = {
+        title: form.title.value,
+        text: form.text.value,
+        subject: form.subject.value,
+        date: form.date.value
+      }
+
+      // Show user message  
+      document.querySelector('.user').style.display = 'block';
+
+      // Make request and handle response  
+      fetch('http://localhost:5000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(result => {
+        botResponse.textContent = result;
+      })
+      .catch(error => {
+        console.error(error);
+        botResponse.textContent = 'Oops, an error occurred!';
+      });
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Grow to fill available space */
+            overflow-y: auto; /* Enable scrolling */
+        }
+        .message {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .user-message {
+            background-color: #4caf50;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message">Welcome to News Detection Chat</div>
+    </div>
+    <div class="input-container">
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="text" placeholder="Text">
+        <input type="text" id="subject" placeholder="Subject">
+        <input type="text" id="date" placeholder="Date">
+        <button onclick="sendData()">Send</button>
+    </div>
+
+    <script>
+        function sendData() {
+            // Get input values
+            const title = document.getElementById("title").value;
+            const text = document.getElementById("text").value;
+            const subject = document.getElementById("subject").value;
+            const date = document.getElementById("date").value;
+
+            // Create a JSON object
+            const jsonData = {
+                title,
+                text,
+                subject,
+                date
+            };
+
+            // Assuming you have a function to send data to the server
+            // and receive a response
+            sendToServer(jsonData);
+        }
+
+        function sendToServer(data) {
+            // You can make an AJAX request or use Fetch API here
+            // to send the data to your server and receive a response
+            // Once you have the response, display it in the chat container
+            const chatContainer = document.querySelector(".chat-container");
+            const message = document.createElement("div");
+            message.classList.add("message", "user-message");
+            message.textContent = JSON.stringify(data);
+            chatContainer.appendChild(message);
+
+            // Scroll to the newest content
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Simulate a response from the server (you should replace this with actual server response handling)
+            setTimeout(() => {
+                const response = {
+                    message: "News is likely real.",
+                    confidence: "90%"
+                };
+                displayResponse(response);
+            }, 1000);
+        }
+
+        function displayResponse(response) {
+            const chatContainer = document.querySelector(".chat-container");
+            const message = document.createElement("div");
+            message.classList.add("message");
+            message.textContent = `Server Response: ${response.message} (Confidence: ${response.confidence})`;
+            chatContainer.appendChild(message);
+
+            // Scroll to the newest content
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>

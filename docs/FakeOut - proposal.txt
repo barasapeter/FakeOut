@@ -1,0 +1,51 @@
+INSTITUTION
+EGERTON UNIVERSITY
+
+SUPERVISORS
+
+GROUP NAME
+
+GROUP MEMBERS
+
+TITLE
+FAKEOUT
+
+
+
+
+
+
+
+
+PROBLEM STATEMENT
+Misinformation and fake news spread rapidly on the internet and social media, often having real world negative consequences like spreading false beliefs, influencing elections, affecting stock prices and more. According to surveys, most people are unable to reliably distinguish real vs fake news stories. 
+
+While fact checking organizations try to verify claims, they lack the scale and speed to address the volume of fake content spreading online. Manual fact checking also cannot keep up with new ways that fake news evolves to avoid detection. 
+
+There is a need for an automated AI system that can help identify and flag potential fake news at scale across the internet. The system needs to be able to analyze news content using natural language processing and compare claims to verified factual sources. It should integrate explainable machine learning models that can be trained to catch manipulated or fabricated content based on different linguistic and semantic signals. 
+
+The goal is to build a usable tool that provides users visual indicators on news that are likely real vs fake as a second layer of verification before further spreading potentially false information. It will enhance decision making, combat the influence of misinformation campaigns, and promote a well-informed society.
+
+OBJECTIVES
+Data Collection
+Compiling a dataset of several thousand news articles from verified sources, evenly balanced between credible reporting and fake/false stories.
+Including articles covering a diverse range of news topics, political viewpoints and writing styles to avoid bias. 
+Cleaning and preprocessing data to extract important features like rhetoric, emotional language, sources cited.
+
+Model Development
+Exploring different ML models like logistic regression, SVM, neural networks to detect fake news based on text features.
+Achieving a classification accuracy of at least 85% on unseen test data.
+Identifying the linguistic signals with the highest correlation to fake or real news.
+Optimizing models to minimize false positives/negatives and be robust against new data.
+
+System Design
+The system development is based on designing a user-friendly web interface and browser extension to display fake news prediction scores.
+We create summarization algorithms to explain to users what signals indicate an article may be false, and finally provide recommendations of credible alternative articles on the same topic.
+
+Testing and Validation
+To conduct A/B testing with users to compare performance against human ability to detect fake news. 
+Solicit user feedback through surveys and interviews to improve models and interface.
+Partner with fact-checking organizations to integrate API access to their databases for verification.
+Page | 2 
+https://github.com/barasapeter/fakeout
+

@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Florida 'Viewpoint Diversity' Law Doesn't Require University Staff, Students To Register Political Views",
+        "subtitle": "The 2021 law has been a source of controversy in the Sunshine State",
+        "claim": "Florida Gov. Ron DeSantis signed legislation requiring state universities to assess \"viewpoint diversity\" by surveying students and staff, in effect requiring them to register their political views with the state.",
+        "rating": {
+            "mixture": {
+                "what's true": "A 2021 law signed by Florida Gov. Ron DeSantis requires state universities and colleges to survey staff and students to assess \"intellectual freedom\" and \"viewpoint diversity\" on campuses. However ...",
+                "what's false": "The law does not require that students and staff register their political views with the state."
+            }
+        },
+        "origin": [
+            "Florida Gov. Ron DeSantis in June 2021 signed legislation that would require universities to survey students, faculty, and staff about \"intellectual freedom\" and \"viewpoint diversity\" on their respective campuses.",
+            "More than a year later, in July 2022, various social media users posted misleading comments alleging that the law would require staff and students on those campuses to \"register their political views\" with the state.",
+            "For example, former U.S. Sen. Claire McCaskill, a Democrat from Missouri and media commentator, tweeted about the law on July 6, 2022, \"Is this America? Really? What kind of autocratic, freedom squashing, Government overreach is this?\" Famed horror fiction writer Stephen King also tweeted, \"DeSantis signs bill requiring Florida students, professors to register political views with state. I. Can't. Even.\""
+        ],
+        "facts about subject": [
+            "The State Board of Education shall require each Florida College System institution to conduct an annual assessment of the intellectual freedom and viewpoint diversity at that institution. The State Board of Education shall select or create an objective, nonpartisan, and statistically valid survey to be used by each institution which considers the extent to which competing ideas and perspectives are presented and members of the college community, including students, faculty, and staff, feel free to express their beliefs and viewpoints on campus and in the classroom."
+        ]
+    }
+]

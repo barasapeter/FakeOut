@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Article Title",
+        "date": "01/14/2021",
+        "author": "John Smith",
+        "source": "www.newswebsite.com",
+        "text": "Text of article here...",
+        "labels": {
+            "fake": 0,
+            "real": 1
+        },
+        "fact_sources": [
+            "https://factcheck.org/article123 - Debunked"
+        ],
+        "sentiment": 0.73,
+        "biased_words": [
+            "corrupt",
+            "disaster",
+            "incompetent"
+        ],
+        "punctuation": {
+            "excl_count": 12,
+            "ques_count": 3
+        }
+    },
+    {
+        "title": "Withdrawals from Local Banks Cause Chaos",
+        "date": "10/20/2020",
+        "author": "Jane Doe",
+        "source": "conspiracytimes.co",
+        "text": "Panicked citizens rushed to ATMs and banks to withdraw cash after rumors spread on social media about impending bank collapses and loss of savings. 'Everyone was frantic to get their money out,' an eyewitness stated.",
+        "labels": {
+            "fake": 1,
+            "real": 0
+        },
+        "fact_sources": [
+            "https://www.fdic.gov/debunked-bank-collapse-rumors"
+        ],
+        "sentiment": 0.85,
+        "biased_words": [
+            "chaos",
+            "frantic",
+            "panic"
+        ]
+    },
+    {
+        "title": "Candidate A Lied About Their Education",
+        "date": "08/18/2021",
+        "author": "Joe Schmoe",
+        "source": "notrealnews.co",
+        "text": "According to anonymous sources, Candidate A never actually graduated from the university and fabricated their degree.",
+        "labels": {
+            "fake": 1,
+            "real": 0
+        },
+        "fact_sources": [
+            "https://factchecker.org/proved-candidate-a-graduated"
+        ],
+        "sentiment": 0.98,
+        "biased_words": [
+            "lied",
+            "fabricated"
+        ],
+        "punctuation": {
+            "excl_count": 3
+        }
+    }
+]
